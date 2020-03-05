@@ -5,9 +5,7 @@ services:
     container_name: "nginx-google"
     restart: "always"
     volumes: 
-      - "nginx-google-log:/var/log/nginx/"
+      - "./nginx-google-log:/var/log/nginx/"
+      - "./nginx.conf:/usr/local/nginx/conf/nginx.conf"
     ports: 
-      - "80:80"
-  
-volumes: 
-  nginx-google-log:
+      - "8082:80"
